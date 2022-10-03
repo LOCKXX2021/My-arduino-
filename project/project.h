@@ -5,7 +5,7 @@
 #define echoPin 6
 //脉冲时间变量
 
-int distance(){
+int distance(void){
   digitalWrite(trigPin, LOW);
   delayMicroseconds(5);//稳定电位
   digitalWrite(trigPin, HIGH);
