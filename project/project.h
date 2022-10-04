@@ -87,31 +87,31 @@ void motor_stop(int IN1,int IN2){
   digitalWrite(PWMB,LOW);
   }
 }
-void car_right(){
+void car_right(void){
   //define a move to left function
   //左电机快转，右电机慢转
   motor_backmove(BIN1,BIN2);
   motor_full_move(AIN1,AIN2);
 }
-void car_left(){
+void car_left(void){
   //define a move to right function
   //左电机慢转，右电机快转
   motor_backmove(AIN1,AIN2);
   motor_full_move(BIN1,BIN2);
 
 }
-void car_stop(){
+void car_stop(void){
   //define a stop function
   motor_stop(AIN1,AIN2);
   motor_stop(BIN1,BIN2);
 
 }
-void car_full_move(){
+void car_full_move(void){
   //define a function let car full-speed move
   motor_full_move(AIN1, AIN2);
   motor_full_move(BIN1, BIN2);
 }
-void car_wait(){
+void car_wait(void){
   digitalWrite(STBY, LOW);
 }
 
